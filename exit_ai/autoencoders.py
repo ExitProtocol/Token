@@ -26,4 +26,4 @@ def detect_anomalies(model, data, threshold=0.1):
     with torch.no_grad():
         reconstructed = model(data)
         loss = torch.mean((reconstructed - data) ** 2, dim=1)
-        return loss > threshold  # Boolean anomaly mask
+        return loss > threshold
