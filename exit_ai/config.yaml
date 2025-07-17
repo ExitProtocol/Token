@@ -1,0 +1,15 @@
+# exit_ai
+
+model_paths:
+  autoencoder: "./model_autoencoder.h5"
+  isolation_forest: "./model_isoforest.pkl"
+  gmm: "./model_gmm.pkl"
+
+federated:
+  aggregation: "fed_avg"
+  encryption: "homomorphic"
+  reputation_threshold: 0.75
+
+reinforcement:
+  algorithm: "PPO"
+  traceability_threshold: 0.4
