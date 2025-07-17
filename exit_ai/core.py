@@ -29,7 +29,6 @@ class EXITAI:
         if_score = self.isolation_forest.detect(transaction_data)
         gmm_score = self.gmm.detect(transaction_data)
 
-        # Ensemble score with weighted average if needed
         scores = [ae_score, if_score, gmm_score]
         ensemble_score = sum(scores) / len(scores)
 
