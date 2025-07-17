@@ -62,4 +62,4 @@ exit_ai/
 ---
 
 📖 Additional Resources
-For detailed documentation and whitepapers, visit exit-token.com.
+For detailed documentation and whitepapers, visit our official website.
