@@ -1,9 +1,4 @@
 
----
-
-## 📦 4. package.json
-
-```json
 {
   "name": "exit-token",
   "version": "1.0.0",
