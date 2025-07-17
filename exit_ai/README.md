@@ -47,12 +47,7 @@ exit_ai/
 - PyYAML
 - Additional dependencies listed in `requirements.txt`
 
-### Installation
-
-```bash
-git clone https://github.com/yourorg/exit-ai.git
-cd exit-ai
-pip install -r requirements.txt
+```
 
 ---
 
