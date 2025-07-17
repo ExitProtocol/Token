@@ -12,4 +12,4 @@ class GMMDetector:
 
     def detect(self, X):
         probs = self.model.score_samples(X)
-        return np.where(probs < -15, 1, 0)  # simplistic threshold
+        return np.where(probs < -15, 1, 0)
