@@ -5,20 +5,17 @@ import json
 import time
 from pathlib import Path
 
-# Simüle edilmiş IPFS yüklemesi
 def simulate_ipfs_upload(model_path):
     with open(model_path, 'rb') as f:
         content = f.read()
-    fake_ipfs_hash = hashlib.sha1(content).hexdigest()[:46]  # IPFS benzeri hash
+    fake_ipfs_hash = hashlib.sha1(content).hexdigest()[:46]
     return f"ipfs://{fake_ipfs_hash}"
 
-# SHA-256 hash oluştur
 def generate_model_hash(model_path):
     with open(model_path, 'rb') as f:
         model_data = f.read()
     return hashlib.sha256(model_data).hexdigest()
 
-# Hash + Timestamp + Metadata dosyası oluştur
 def write_commitment_json(model_path, ipfs_uri, model_hash):
     commitment = {
         "timestamp": int(time.time()),
