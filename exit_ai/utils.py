@@ -3,7 +3,7 @@
 import numpy as np
 
 def calculate_traceability_score(tx_path):
-    # Dummy entropy-based traceability metric
+    
     entropy = -np.sum([p*np.log2(p) for p in tx_path if p > 0])
     return entropy / len(tx_path)
 
