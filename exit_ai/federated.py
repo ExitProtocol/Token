@@ -22,12 +22,11 @@ class FederatedServer:
             print(f"[!] Decryption failed from {node_id}: {e}")
 
     def is_valid_update(self, weights, node_id):
-        # Basit anomaly detection – zehirli güncellemeleri filtrele
         mean_abs = np.mean([w.abs().mean().item() for w in weights.values()])
-        if mean_abs > 10:  # Heuristic threshold
+        if mean_abs > 10:
             self.reputations[node_id] *= 0.5
             return False
-        self.reputations[node_id] *= 1.05  # Trust score artır
+        self.reputations[node_id] *= 1.05
         return True
 
     def aggregate_updates(self):
